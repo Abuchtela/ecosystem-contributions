@@ -41,8 +41,8 @@ Before you start, make sure you have the following installed on your machine:
 
    Run the build script:
 
-    ```bash
-   pnpm run build
+    ```bashpnpm run build
+   
     ```
     If you want to build the project without processing the new markdown files added, use this command instead:
     ```bash
