@@ -109,6 +109,23 @@ Once testing is complete, deploy your updated application to production immediat
 
 ## Verification Steps
 
+### Quick Verification
+
+Run the automated verification script:
+
+```bash
+./scripts/verify-security-update.sh
+```
+
+This script will check:
+- Next.js version is 14.2.35 or higher
+- React and React DOM are installed
+- ESLint passes without errors
+
+### Manual Verification
+
+If you prefer to verify manually, follow these steps:
+
 ### 1. Verify Package Versions
 
 Check that the correct versions are installed:
