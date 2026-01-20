@@ -44,6 +44,10 @@ As always, the Optimism Collective is a band of companies, communities, and citi
 
 To claim an idea follow the guide [here](./docs/claim-an-idea.md).
 
+## Security Updates
+
+This project has been updated to address critical security vulnerabilities in React Server Components. For details about the CVE fixes and verification steps, see the [Security Update Documentation](./docs/security-update-nextjs-14.2.35.md).
+
 ## Support and Additional Resources
 
 We want to do everything we can to help you be successful while working on your contribution. Here you'll find various resources and communities that may help you complete a project. Please also feel free to ask for support directly in the [Optimism Developer Support GitHub](https://github.com/ethereum-optimism/developers).
