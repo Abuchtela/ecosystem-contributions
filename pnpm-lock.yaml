@@ -30,8 +30,8 @@ importers:
         specifier: ^1.1.5
         version: 1.1.5(react@18.2.0)
       react-tooltip:
-        specifier: ^5.26.3
-        version: 5.26.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^5.29.1
+        version: 5.30.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       remark:
         specifier: ^15.0.1
         version: 15.0.1
@@ -1473,8 +1473,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react-tooltip@5.26.3:
-    resolution: {integrity: sha512-MpYAws8CEHUd/RC4GaDCdoceph/T4KHM5vS5Dbk8FOmLMvvIht2ymP2htWdrke7K6lqPO8rz8+bnwWUIXeDlzg==}
+  react-tooltip@5.30.0:
+    resolution: {integrity: sha512-Yn8PfbgQ/wmqnL7oBpz1QiDaLKrzZMdSUUdk7nVeGTwzbxCAJiJzR4VSYW+eIO42F1INt57sPUmpgKv0KwJKtg==}
     peerDependencies:
       react: '>=16.14.0'
       react-dom: '>=16.14.0'
@@ -3522,7 +3522,7 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-tooltip@5.26.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  react-tooltip@5.30.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@floating-ui/dom': 1.6.3
       classnames: 2.5.1
