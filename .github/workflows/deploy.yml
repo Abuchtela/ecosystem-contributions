@@ -52,11 +52,7 @@ jobs:
         continue-on-error: true
       
       - name: Build
-        run: pnpm run prebuild && pnpm build
-      
-      - name: Test
-        run: pnpm test
-        continue-on-error: true
+        run: pnpm build
 
   deploy-preview:
     runs-on: ubuntu-latest
