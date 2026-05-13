@@ -9,7 +9,6 @@
     "build:unprocessed": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preinstall": "npx only-allow pnpm",
     "clean": "node ./data/cleanBlankSpace.mjs",
     "process": "node ./data/processMarkDown.mjs",
     "prebuild": "pnpm run clean && pnpm run process"
