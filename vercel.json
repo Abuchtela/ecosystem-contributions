@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm run prebuild && pnpm build",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "outputDirectory": ".next",
+  "public": false,
+  "env": [
+    "OPTIMISM_RPC_URL",
+    "NEXT_PUBLIC_OPTIMISM_RPC_URL",
+    "NEXT_PUBLIC_DELEGATE_CONTRACT",
+    "NEXT_PUBLIC_OP_TOKEN_ADDRESS",
+    "NEXT_PUBLIC_FARCASTER_HUB_URL"
+  ],
+  "headers": [
+    {
+      "source": "/api/frame",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=60"
+        }
+      ]
+    },
+    {
+      "source": "/api/frame/:path*",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/frame",
+      "destination": "/api/frame"
+    }
+  ]
+}

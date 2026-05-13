@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  op-delegation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - OPTIMISM_RPC_URL=${OPTIMISM_RPC_URL:-https://mainnet.optimism.io}
+      - NEXT_PUBLIC_OPTIMISM_RPC_URL=${NEXT_PUBLIC_OPTIMISM_RPC_URL:-https://mainnet.optimism.io}
+      - NEXT_PUBLIC_DELEGATE_CONTRACT=${NEXT_PUBLIC_DELEGATE_CONTRACT:-0x489aa610671495d07cc33da88b482406e1d6b44b}
+      - NEXT_PUBLIC_OP_TOKEN_ADDRESS=${NEXT_PUBLIC_OP_TOKEN_ADDRESS:-0x4200000000000000000000000000000000000042}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/op-delegation"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - op-network
+
+  # Optional: Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - op-delegation
+    networks:
+      - op-network
+    restart: unless-stopped
+
+networks:
+  op-network:
+    driver: bridge
