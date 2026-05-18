@@ -119,7 +119,7 @@ Setup:
 - `.github/workflows/deploy.yml` - GitHub Actions (done)
 
 **Documentation**:
-- `DEPLOYMENT_READY.md` - All deployment guides
+- `deployment/DEPLOYMENT_READY.md` - All deployment guides
 - `INTEGRATION_GUIDE.md` - Wallet & blockchain integration
 - `PROJECT_MANIFEST.md` - Complete file inventory
 - Plus 8 more comprehensive guides
@@ -193,7 +193,7 @@ pnpm dev
 ```
 
 ### Step 2: Deploy (Choose One Platform)
-Follow instructions in `DEPLOYMENT_READY.md`:
+Follow instructions in `deployment/DEPLOYMENT_READY.md`:
 - **Vercel** (Recommended - 5 min)
 - **Docker** (Self-hosted - 10 min)
 - **Railway** (Alternative - 5 min)
@@ -216,9 +216,9 @@ Follow instructions in `DEPLOYMENT_READY.md`:
 Start with these in order:
 
 1. **PROJECT_MANIFEST.md** ← You are here
-2. **DEPLOYMENT_READY.md** ← Deployment instructions
+2. **deployment/DEPLOYMENT_READY.md** ← Deployment instructions
 3. **INTEGRATION_GUIDE.md** ← Advanced features
-4. **DEPLOYMENT_CHECKLIST.md** ← Pre-deployment verification
+4. **deployment/DEPLOYMENT_CHECKLIST.md** ← Pre-deployment verification
 
 Plus 8 more comprehensive guides for reference.
 
@@ -308,16 +308,16 @@ Plus 8 more comprehensive guides for reference.
 ### 👉 I want enterprise
 → Use **AWS** (30+ minutes)
 
-See `DEPLOYMENT_READY.md` for detailed instructions.
+See `deployment/DEPLOYMENT_READY.md` for detailed instructions.
 
 ---
 
 ## 📞 Support
 
 - **Questions?** Check the documentation files
-- **Deployment issues?** See DEPLOYMENT_CHECKLIST.md
+- **Deployment issues?** See deployment/DEPLOYMENT_CHECKLIST.md
 - **Integration help?** See INTEGRATION_GUIDE.md
-- **Setup help?** See OP_DELEGATION_SETUP.md
+- **Setup help?** See op-delegation/OP_DELEGATION_SETUP.md
 
 ---
 
@@ -331,6 +331,6 @@ You had an idea. We built it completely. It's now ready for production deploymen
 
 ---
 
-**Next Action: Open `DEPLOYMENT_READY.md` and follow the deployment guide for your chosen platform.**
+**Next Action: Open `deployment/DEPLOYMENT_READY.md` and follow the deployment guide for your chosen platform.**
 
 You'll be live in minutes! 🚀

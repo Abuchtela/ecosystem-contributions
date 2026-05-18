@@ -86,7 +86,7 @@
    - Header configuration
    - Rewrites
 
-✅ next.config.extended.ts (40 lines)
+✅ next.config.mjs (40 lines)
    - Next.js optimization
    - Image optimization
    - Environment setup
@@ -462,11 +462,11 @@ pnpm dev
 
 ## 📞 Support Resources
 
-- **Deployment Guide**: DEPLOYMENT_READY.md ← **START HERE**
+- **Deployment Guide**: deployment/DEPLOYMENT_READY.md ← **START HERE**
 - **Integration Guide**: INTEGRATION_GUIDE.md
-- **Setup Guide**: OP_DELEGATION_SETUP.md
-- **Troubleshooting**: DEPLOYMENT_CHECKLIST.md
-- **Quick Reference**: OP_DELEGATION_QUICK_REFERENCE.md
+- **Setup Guide**: op-delegation/OP_DELEGATION_SETUP.md
+- **Troubleshooting**: deployment/DEPLOYMENT_CHECKLIST.md
+- **Quick Reference**: op-delegation/OP_DELEGATION_QUICK_REFERENCE.md
 
 ---
 

@@ -32,14 +32,14 @@ src/
 - `.github/workflows/deploy.yml` - GitHub Actions CI/CD
 - `.env.local` - Environment variables
 - `vercel.json` - Vercel deployment config
-- `next.config.extended.ts` - Next.js optimization
+- `next.config.mjs` - Next.js optimization
 - `Dockerfile` - Docker containerization
 - `docker-compose.yml` - Docker Compose orchestration
 - `.gitignore` - Git configuration
 
 ### Documentation (4 Files)
-- `OP_DELEGATION_README.md` - Project overview
-- `OP_DELEGATION_SETUP.md` - Setup & testing guide
+- `../op-delegation/OP_DELEGATION_README.md` - Project overview
+- `../op-delegation/OP_DELEGATION_SETUP.md` - Setup & testing guide
 - `INTEGRATION_GUIDE.md` - Wallet & blockchain integration
 - `DEPLOYMENT_CHECKLIST.md` - Pre-deployment checklist
 
@@ -360,7 +360,7 @@ Ready to deploy: ✅ YES
 ---
 
 **Questions? Check the documentation files:**
-- `OP_DELEGATION_README.md`
-- `OP_DELEGATION_SETUP.md`
+- `../op-delegation/OP_DELEGATION_README.md`
+- `../op-delegation/OP_DELEGATION_SETUP.md`
 - `INTEGRATION_GUIDE.md`
 - `DEPLOYMENT_CHECKLIST.md`

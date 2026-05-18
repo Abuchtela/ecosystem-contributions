@@ -181,10 +181,10 @@ After you deploy:
 → Read `INTEGRATION_GUIDE.md`
 
 **General setup?**
-→ Read `OP_DELEGATION_SETUP.md`
+→ Read `../op-delegation/OP_DELEGATION_SETUP.md`
 
 **Quick reference?**
-→ Read `OP_DELEGATION_QUICK_REFERENCE.md`
+→ Read `../op-delegation/OP_DELEGATION_QUICK_REFERENCE.md`
 
 ---
 
