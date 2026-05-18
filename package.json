@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@rainbow-me/rainbowkit": "^2.2.11",
+    "@tanstack/react-query": "^5.100.10",
     "gray-matter": "^4.0.3",
     "next": "14.2.35",
     "react": "^18",
@@ -23,7 +25,9 @@
     "react-headless-pagination": "^1.1.5",
     "react-tooltip": "^5.26.3",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "viem": "^2.49.3",
+    "wagmi": "^3.6.15"
   },
   "devDependencies": {
     "@types/node": "^20",

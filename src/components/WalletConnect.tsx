@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import { useAccount, useConnectModal } from '@rainbow-me/rainbowkit';
-import { usePrepareContractWrite, useContractWrite } from 'wagmi';
+import { useConnectModal } from '@rainbow-me/rainbowkit';
+import { useAccount } from 'wagmi';
+import { useWriteContract } from 'wagmi';
 
 interface WalletConnectButtonProps {
   children?: React.ReactNode;
@@ -44,10 +44,6 @@ export function DelegateButton({
 }: DelegateButtonProps) {
   const { address } = useAccount();
 
-  if (!address) {
-    return null;
-  }
-
   // Contract ABI for delegate function
   const delegateABI = [
     {
@@ -65,23 +61,28 @@ export function DelegateButton({
     },
   ];
 
-  const { config } = usePrepareContractWrite({
-    address: '0x4200000000000000000000000000000000000042' as `0x${string}`,
-    abi: delegateABI,
-    functionName: 'delegate',
-    args: [delegateAddress as `0x${string}`],
-    enabled: !!delegateAddress && /^0x[a-fA-F0-9]{40}$/.test(delegateAddress),
-  });
+  const { writeContract, isPending } = useWriteContract();
+  const isValidDelegate =
+    !!delegateAddress && /^0x[a-fA-F0-9]{40}$/.test(delegateAddress);
 
-  const { write, isLoading } = useContractWrite(config);
+  if (!address) {
+    return null;
+  }
 
   return (
     <button
-      onClick={() => write?.()}
-      disabled={disabled || isLoading || !write}
+      onClick={() =>
+        writeContract({
+          address: '0x4200000000000000000000000000000000000042',
+          abi: delegateABI,
+          functionName: 'delegate',
+          args: [delegateAddress as `0x${string}`],
+        })
+      }
+      disabled={disabled || isPending || !isValidDelegate}
       className="px-6 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 disabled:opacity-50 transition-colors"
     >
-      {loading || isLoading ? 'Delegating...' : '✓ Delegate'}
+      {loading || isPending ? 'Delegating...' : '✓ Delegate'}
     </button>
   );
 }
