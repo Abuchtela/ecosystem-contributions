@@ -11,7 +11,9 @@
     "lint": "next lint",
     "clean": "node ./data/cleanBlankSpace.mjs",
     "process": "node ./data/processMarkDown.mjs",
-    "prebuild": "pnpm run clean && pnpm run process"
+    "prebuild": "pnpm run clean && pnpm run process",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -30,12 +32,17 @@
     "wagmi": "^3.6.15"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
